@@ -13,18 +13,15 @@ html {
 }
 
 .projects {
+    padding-right: 12.5%;
     display: flex;
-    /* Use flexbox for layout */
     flex-wrap: wrap;
-    /* Allow items to wrap onto the next line */
     gap: 0px;
-    /* Space between columns */
+    margin-left: -1%
 }
 
 .column {
     flex: 50%;
-    /* Each column takes up half of the container's width */
-    /* Optional styling for alignment and padding */
     padding: 10px;
     box-sizing: border-box;
 }
@@ -35,12 +32,12 @@ html {
     /* Background color */
     border: 1px solid #dddddd00;
     /* Border for each entry */
-    padding: 15px;
     /* Padding inside each entry */
     margin-bottom: 20px;
     /* Space between entries */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0);
     /* Optional: Adds a subtle shadow */
+    font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
 }
 
 .entry img {
@@ -54,11 +51,39 @@ html {
 
 .entry h3 {
     margin-top: 0;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-variation-settings: "wdth" 120;
     /* Remove top margin from headings */
 }
 
+.tooltip {
+    color: var(--hoverable-color);
+    cursor: pointer;
+}
 
-/* Add more styling as needed for h3, p tags and other elements inside .entry */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    text-align: left;
+    padding: 15px;
+    position: absolute;
+    z-index: 1;
+    background-color: #9b9b9bb9;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    color: var(--color);
+    opacity: 0;
+    transition: opacity 0.3s linear, visibility 0s linear 0.5s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+}
 
 body {
     margin: 0;
@@ -73,6 +98,7 @@ div#body {
     padding-top: 2em;
     font-size: 1.2em;
     font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-variation-settings: "wdth" 110;
 }
 
 a {
@@ -87,22 +113,23 @@ div#container {
     margin-right: auto;
     max-width: 1400px;
     padding-left: 12.5%;
-    width: 87.5%;
 }
 
 article {
     padding-top: 0;
     font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    margin-left: -0.5%;
 }
 
 h1 {
     font-weight: 300;
     font-weight: bold;
-    margin-top: 4rem;
-    margin-bottom: 0.5rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
     line-height: 1;
     font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 3em;
+    font-variation-settings: "wdth" 120;
 }
 
 h2 {
@@ -187,14 +214,6 @@ a:hover::after {
     color: var(--underline-color);
 }
 
-div#container {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1400px;
-    padding-left: 12.5%;
-    width: 87.5%;
-}
-
 .hvr-underline-reveal {
     display: inline-block;
     vertical-align: middle;
@@ -221,6 +240,8 @@ div#container {
     transition-duration: 0.3s;
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
+    -webkit-transition-delay: 0.01s;
+    transition-delay: 0.01s;
 }
 
 .hvr-underline-reveal:hover:before,
@@ -231,11 +252,11 @@ div#container {
 }
 
 :root {
-    --dark-bg: #003546;
-    --dark-color: #eee8d5;
+    --dark-bg: #16273d;
+    --dark-color: #ffdeb0;
     --dark-code: #93a1a1;
-    --light-bg: #fbfafa;
-    --light-color: #2c2c2c;
+    --light-bg: #e9931a;
+    --light-color: #1c1c1c;
     --light-code: #657b83;
     --icon-color: #000000;
     --underline-color: var(--light-color);
