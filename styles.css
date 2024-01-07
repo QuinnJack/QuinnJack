@@ -1,0 +1,292 @@
+@charset "UTF-8";
+@font-face {
+    font-family: "et-book";
+    src: url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot");
+    src: url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff") format("woff"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf") format("truetype"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.svg#etbookromanosf") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html {
+    font-size: 18px;
+}
+
+.typing {
+    width: 21ch;
+    margin-top: 4rem;
+    animation: typing 2s steps(21), blink 0.5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid;
+    font-family: "SF Mono", SFMono-Regular, ui-monospace, Menlo, "DejaVu Sans Mono", Consolas, "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", monospace;
+    font-weight: 400;
+    font-weight: bold;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    font-size: 3.5em;
+}
+
+body {
+    margin: 0;
+    max-width: 100%;
+    padding: 0;
+    width: 100%;
+}
+
+div#body {
+    min-height: calc(100vh - 4em);
+    padding-bottom: 2em;
+    padding-top: 2em;
+    font-size: 1.2em;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-variation-settings: "wdth" 110;
+    background-color: #ff0000;
+}
+
+a {
+    position: relative;
+    text-decoration: bold;
+    color: #000;
+    padding: 10px;
+}
+
+div#container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1400px;
+    padding-left: 12.5%;
+    width: 87.5%;
+}
+
+article {
+    padding-top: 0;
+    font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+}
+
+h1 {
+    font-weight: 400;
+    font-weight: bold;
+    margin-top: 4rem;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 4em;
+}
+
+h2 {
+    font-weight: 400;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: bold;
+    margin-top: 2.1rem;
+    margin-bottom: 1.4rem;
+    font-size: 1.8rem;
+    line-height: 1;
+    font-variation-settings: "wdth" 120;
+}
+
+section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+p,
+dl,
+ol,
+ul {
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+p {
+    margin-top: 1.4rem;
+    margin-bottom: 1.4rem;
+    padding-right: 0;
+    vertical-align: baseline;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+section>p,
+section>footer,
+section>table {
+    width: 55%;
+}
+
+a:link,
+a:visited {
+    color: inherit;
+}
+
+a:link,
+.tufte-underline,
+.hover-tufte-underline:hover {
+    text-decoration: none;
+    background: -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(currentColor, currentColor);
+    background: linear-gradient(#fffff8, #fffff8), linear-gradient(#fffff8, #fffff8), linear-gradient(currentColor, currentColor);
+    -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8, -0.15em 0 #fffff8;
+    background-position: 0% 93%, 100% 93%, 0% 93%;
+}
+
+a:link::selection,
+a:link::-moz-selection {
+    text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
+    background: #b4d5fe;
+}
+
+a:link {
+    background: none;
+    text-shadow: none;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    color: var(--underline-color);
+    transition: width 0.3s ease-in-out;
+}
+
+a:hover::after {
+    width: 100%;
+    color: var(--underline-color);
+}
+
+div#container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1400px;
+    padding-left: 12.5%;
+    width: 87.5%;
+}
+
+.hvr-underline-reveal {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+}
+
+.hvr-underline-reveal:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--underline-color);
+    height: 2px;
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    -webkit-transition-delay: 0.01s;
+    transition-delay: 0.01s;
+}
+
+.hvr-underline-reveal:hover:before,
+.hvr-underline-reveal:focus:before,
+.hvr-underline-reveal:active:before {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+:root {
+    --dark-bg: #141518;
+    --dark-color: rgb(242, 223, 195);
+    --dark-code: #93a1a1;
+    --light-bg: #fbfafa;
+    --light-color: #2c2c2c;
+    --light-code: #657b83;
+    --icon-color: #000000;
+    --underline-color: var(--light-color);
+    --the-background-color: var(--dark-bg);
+}
+
+@media (prefers-color-scheme: dark) {
+    div#body {
+        background-color: var(--dark-bg);
+        color: var(--dark-color);
+    }
+    input#lightswitch:checked+div#body {
+        background-color: var(--light-bg);
+        color: var(--light-color);
+    }
+    input#lightswitch:not(:checked)~div#body {
+        --underline-color: var(--dark-color);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    #body {
+        background-color: var(--light-bg);
+    }
+    div#body {
+        background-color: var(--light-bg);
+        color: var(--light-color);
+    }
+    input#lightswitch:checked+div#body {
+        background-color: var(--dark-bg);
+        color: var(--dark-color);
+    }
+    input#lightswitch:not(:checked)~div#body {
+        --underline-color: var(--dark-color);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .github-icon {
+        color: var(--icon-color);
+    }
+    input#lightswitch:checked~.github-icon {
+        color: var(--icon-color);
+    }
+     :root {
+        --underline-color: var(--underline-light);
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+input#lightswitch {
+    display: none;
+}
+
+label#lightswitch-label {
+    cursor: pointer;
+}
+
+@keyframes backgroundGradient {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 0 100%;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
