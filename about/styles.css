@@ -103,6 +103,8 @@ p {
     margin-bottom: 1.4rem;
     padding-right: 0;
     vertical-align: baseline;
+    font-size: 1.2rem;
+    line-height: 2rem;
 }
 
 section>p,
