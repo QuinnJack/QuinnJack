@@ -1,0 +1,335 @@
+@charset "UTF-8";
+@font-face {
+    font-family: "et-book";
+    src: url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot");
+    src: url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff") format("woff"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf") format("truetype"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.svg#etbookromanosf") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html {
+    font-size: 18px;
+}
+
+.projects {
+    padding-right: 12.5%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px;
+    margin-left: -1%
+}
+
+.column {
+    flex: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.entry {
+    /* Styling for each project entry */
+    background-color: #ffffff00;
+    /* Background color */
+    border: 1px solid #dddddd00;
+    /* Border for each entry */
+    /* Padding inside each entry */
+    margin-bottom: 20px;
+    /* Space between entries */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0);
+    /* Optional: Adds a subtle shadow */
+    font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+}
+
+.entry img {
+    width: 50%;
+    /* Make images stretch to fit the width */
+    height: 10vh;
+    /* Keep image aspect ratio */
+    margin-bottom: 10px;
+    /* Space between image and text */
+}
+
+.entry h3 {
+    margin-top: 0;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-variation-settings: "wdth" 120;
+    /* Remove top margin from headings */
+}
+
+.tooltip {
+    color: var(--hoverable-color);
+    cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    text-align: left;
+    padding: 15px;
+    position: absolute;
+    z-index: 1;
+    background-color: #9b9b9bb9;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    color: var(--color);
+    opacity: 0;
+    transition: opacity 0.3s linear, visibility 0s linear 0.5s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+body {
+    margin: 0;
+    max-width: 100%;
+    padding: 0;
+    width: 100%;
+}
+
+div#body {
+    min-height: calc(100vh - 4em);
+    padding-bottom: 2em;
+    padding-top: 2em;
+    font-size: 1.2em;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-variation-settings: "wdth" 110;
+}
+
+a {
+    position: relative;
+    text-decoration: bold;
+    color: #000;
+    padding: 10px;
+}
+
+div#container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1400px;
+    padding-left: 12.5%;
+}
+
+article {
+    padding-top: 0;
+    font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    margin-left: -0.5%;
+}
+
+h1 {
+    font-weight: 300;
+    font-weight: bold;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    line-height: 1;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 3em;
+    font-variation-settings: "wdth" 120;
+}
+
+h2 {
+    font-weight: 400;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: bold;
+    margin-top: 2.1rem;
+    margin-bottom: 1.4rem;
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+p,
+dl,
+ol,
+ul {
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+p {
+    margin-top: 1.4rem;
+    margin-bottom: 1.4rem;
+    padding-right: 0;
+    vertical-align: baseline;
+}
+
+section>p,
+section>footer,
+section>table {
+    width: 55%;
+}
+
+a:link,
+a:visited {
+    color: inherit;
+}
+
+a:link,
+.tufte-underline,
+.hover-tufte-underline:hover {
+    text-decoration: none;
+    background: -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(currentColor, currentColor);
+    background: linear-gradient(#fffff8, #fffff8), linear-gradient(#fffff8, #fffff8), linear-gradient(currentColor, currentColor);
+    -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8, -0.15em 0 #fffff8;
+    background-position: 0% 93%, 100% 93%, 0% 93%;
+}
+
+a:link::selection,
+a:link::-moz-selection {
+    text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
+    background: #b4d5fe;
+}
+
+a:link {
+    background: none;
+    text-shadow: none;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    color: var(--underline-color);
+    transition: width 0.3s ease-in-out;
+}
+
+a:hover::after {
+    width: 100%;
+    color: var(--underline-color);
+}
+
+.hvr-underline-reveal {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+}
+
+.hvr-underline-reveal:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--underline-color);
+    height: 2px;
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    -webkit-transition-delay: 0.01s;
+    transition-delay: 0.01s;
+}
+
+.hvr-underline-reveal:hover:before,
+.hvr-underline-reveal:focus:before,
+.hvr-underline-reveal:active:before {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+:root {
+    --dark-bg: #16273d;
+    --dark-color: #ffdeb0;
+    --dark-code: #93a1a1;
+    --light-bg: #e9931a;
+    --light-color: #1c1c1c;
+    --light-code: #657b83;
+    --icon-color: #000000;
+    --underline-color: var(--light-color);
+}
+
+@media (prefers-color-scheme: dark) {
+    div#body {
+        background-color: var(--dark-bg);
+        color: var(--dark-color);
+    }
+    input#lightswitch:checked+div#body {
+        background-color: var(--light-bg);
+        color: var(--light-color);
+    }
+    input#lightswitch:not(:checked)~div#body {
+        --underline-color: var(--dark-color);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    div#body {
+        background-color: var(--light-bg);
+        color: var(--light-color);
+    }
+    input#lightswitch:checked+div#body {
+        background-color: var(--dark-bg);
+        color: var(--dark-color);
+    }
+    input#lightswitch:not(:checked)~div#body {
+        --underline-color: var(--dark-color);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .github-icon {
+        color: var(--icon-color);
+    }
+    input#lightswitch:checked~.github-icon {
+        color: var(--icon-color);
+    }
+     :root {
+        --underline-color: var(--underline-light);
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+input#lightswitch {
+    display: none;
+}
+
+label#lightswitch-label {
+    cursor: pointer;
+}
+
+@keyframes backgroundGradient {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 0 100%;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
