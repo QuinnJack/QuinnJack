@@ -1,0 +1,286 @@
+.lightbox {
+  visibility: hidden;
+  opacity: 0;
+  padding: var(--space-layout-m);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+  background: #000000bf;
+  justify-content: center;
+  align-items: center;
+  transition-property: visibility, opacity;
+  display: flex;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition-duration: 0.25s !important;
+}
+.lightbox > picture,
+.lightbox > picture img,
+.lightbox > video {
+  width: 100%;
+  height: 100%;
+}
+.lightbox > picture img,
+.lightbox > video {
+  object-fit: contain;
+  transition-property: transform;
+  animation: 0.3s cubic-bezier(0.33, 1, 0.5, 1.25) zoom-in;
+  transform: scale(0.965);
+  transition-duration: 0.25s !important;
+  transition-timing-function: ease-out !important;
+}
+.lightbox.open {
+  visibility: visible;
+  opacity: 1;
+}
+.lightbox.open > picture img,
+.lightbox.open > video {
+  transform: scale(1);
+}
+@keyframes zoom-in {
+  0% {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+section.hero img {
+  object-fit: cover;
+  width: 100%;
+  height: 50vh;
+  display: block;
+}
+section.info {
+  gap: var(--space-layout-xl);
+  margin: var(--space-layout-xl) auto var(--space-layout-xl);
+  padding: 0 var(--space-layout-l);
+  max-width: 900px;
+  display: flex;
+}
+section.info .description {
+  font-size: var(--font-size-m);
+  letter-spacing: var(--letter-spacing-m);
+}
+section.info .description h1 {
+  letter-spacing: -0.04em;
+  max-width: 23ex;
+  margin-top: -0.24em;
+  font-size: 4.2rem;
+  font-weight: 400;
+  line-height: 1.1;
+}
+section.info .description p {
+  line-height: var(--line-height-paragraph);
+  margin-top: 2rem;
+}
+section.info .description ul.awards {
+  margin-top: 2rem;
+}
+section.info .description ul.awards li {
+  margin-top: 1.2rem;
+  padding-left: 28px;
+  position: relative;
+}
+section.info .description ul.awards li:before {
+  content: "";
+  opacity: 0.3;
+  position: absolute;
+  top: 1px;
+  left: -3px;
+}
+section.info .description a.button {
+  margin-top: 2.6rem;
+  margin-left: -0.4rem;
+}
+section.info .data {
+  --flow-gap: 2.2rem;
+  flex: 0 0 200px;
+}
+section.info .data h3 {
+  margin-top: -0.22em;
+}
+section.info .data ul {
+  margin-top: 1rem;
+}
+section.info .data ul li {
+  margin-top: 0.6rem;
+}
+@media (max-width: 799px) {
+  section.info {
+    display: block;
+  }
+  section.info .data {
+    margin-top: var(--space-layout-xl);
+  }
+}
+@media (max-width: 499px) {
+  section.info .description h1 {
+    font-size: 3.8rem;
+  }
+  section.info .description ul.awards li {
+    padding-left: 26px;
+  }
+  section.info .description ul.awards li:before {
+    top: 0;
+    font-size: 22px !important;
+  }
+}
+section.gallery {
+  grid-template-columns: 1fr 1fr 200px;
+  grid-auto-flow: dense;
+  align-items: end;
+  column-gap: var(--space-layout-l);
+  margin: 0 auto calc(-1 * var(--space-layout-l));
+  padding: 0 var(--space-layout-l);
+  line-height: 1.3;
+  font-size: var(--font-size-xs);
+  letter-spacing: var(--letter-spacing-xs);
+  width: 100%;
+  max-width: 1472px;
+  display: grid;
+}
+section.gallery figure {
+  display: contents;
+}
+section.gallery figure a {
+  margin-bottom: var(--space-layout-l);
+  grid-area: span 128 / span 2;
+}
+section.gallery figure a.border {
+  box-shadow: inset 0 0 0 1px rgba(var(--foreground-color), 0.1);
+}
+section.gallery figure a.border img,
+section.gallery figure a.border video {
+  z-index: -1;
+  position: relative;
+}
+section.gallery figure a img,
+section.gallery figure a video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+section.gallery figure figcaption {
+  grid-row: span 128;
+  margin-bottom: 28px;
+}
+section.gallery figure.split a {
+  grid-column: 1/2;
+}
+figure.split figcaption {
+  position: relative;
+  z-index: 2; /* Ensure it stays above the video */
+}
+section.gallery figure.split figcaption {
+  grid-area: span 127/3 / auto/4;
+  margin-bottom: 18px;
+}
+section.gallery figure.split figcaption {
+  position: relative;
+  z-index: 2;
+  letter-spacing: -0.25px;
+  margin-bottom: 6px;
+  display: block;
+  position: relative;
+}
+
+section.gallery figure.split figcaption:before {
+  content: "left"; /* or any content you want */
+  letter-spacing: -0.25px;
+  margin-bottom: 6px;
+  display: block;
+  position: relative;
+  z-index: 3; /* Ensure it stays visible */
+}
+
+section.gallery figure.split.second a {
+  grid-column: 2/3;
+}
+section.gallery figure.split.second figcaption {
+  grid-row: span 1;
+  margin-bottom: 28px;
+}
+section.gallery figure.split.second figcaption:before {
+  content: "right";
+}
+@media (max-width: 1100px) {
+  section.gallery figure a,
+  section.gallery figure figcaption,
+  section.gallery figure.split figcaption {
+    grid-row: unset;
+  }
+  section.gallery figure.split a,
+  section.gallery figure.split.second a {
+    grid-column: span 2;
+  }
+  section.gallery figure.split figcaption {
+    margin-bottom: 28px;
+  }
+  section.gallery figure.split figcaption:before {
+    display: none;
+  }
+}
+@media (max-width: 859px) {
+  section.gallery figure a,
+  section.gallery figure.split a,
+  section.gallery figure.split.second a,
+  section.gallery figure figcaption,
+  section.gallery figure.split figcaption {
+    grid-column: span 3;
+  }
+  section.gallery figure a {
+    margin-bottom: 12px;
+  }
+  section.gallery figure figcaption,
+  section.gallery figure.split figcaption,
+  section.gallery figure.split.second figcaption {
+    line-height: var(--line-height-paragraph);
+    max-width: 76ex;
+    margin-bottom: 28px;
+  }
+}
+@media (max-width: 499px) {
+  section.gallery figure a {
+    margin-bottom: 10px;
+  }
+  section.gallery figure a.border {
+    box-shadow: none;
+  }
+  section.gallery figure a img,
+  section.gallery figure a video {
+    margin-left: calc(-1 * var(--space-layout-l));
+    width: 100vw;
+  }
+  section.gallery figure figcaption,
+  section.gallery figure.split figcaption,
+  section.gallery figure.split.second figcaption {
+    margin-bottom: 34px;
+  }
+}
+
+section.gallery figure.carousel-figure {
+  grid-column: 1 / -1; /* Span from the first to the last column */
+  width: 100%;
+}
+
+/* Ensure the carousel itself takes up the full width */
+section.gallery figure.carousel-figure .carousel {
+  width: 100%;
+}
+
+/* Adjust the carousel items to maintain aspect ratio */
+section.gallery figure.carousel-figure .carousel-item {
+  width: 100%;
+  height: auto;
+}
+
+/* Make sure images inside the carousel items fit properly */
+section.gallery figure.carousel-figure .carousel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}

@@ -1,0 +1,113 @@
+section {
+  gap: var(--space-layout-l) var(--space-layout-xl);
+  padding: 102px var(--space-layout-l) 0;
+  grid-template-rows: min-content 1fr;
+  grid-template-columns: minmax(0, 810px) 320px;
+  justify-content: center;
+  display: grid;
+}
+section .bio {
+  font-size: var(--font-size-l);
+  letter-spacing: var(--letter-spacing-l);
+  grid-area: 1/1;
+  max-width: 810px;
+}
+section .bio img {
+  padding: 0 var(--space-layout-l);
+  object-fit: contain;
+  object-position: bottom center;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+section .bio picture + p {
+  margin-top: 2.6rem;
+}
+section .bio p {
+  margin-top: 1rem;
+}
+section .bio h3 {
+  margin-top: 1.8rem;
+}
+section .bio ul.socials {
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  margin-left: -0.2rem;
+}
+section .data {
+  --flow-gap: 2.2rem;
+  grid-area: 1/2/3;
+  max-width: 64ex;
+  margin-top: -0.8rem;
+}
+section .data ul li {
+  margin-top: 1.2rem;
+}
+section .data ul li strong,
+section .data ul li span {
+  margin-bottom: 0.2rem;
+  display: block;
+}
+section .data ul li strong {
+  letter-spacing: 0;
+}
+section .data ul li em {
+  font-feature-settings: "case";
+  margin: 0 0.2rem;
+  font-style: normal;
+}
+section .data ul.talks li strong,
+section .data ul.awards li strong {
+  margin-bottom: 0.4rem;
+}
+section .colophon {
+  grid-area: 2/1;
+  max-width: 64ex;
+  margin-top: -0.4rem;
+}
+section .colophon p {
+  margin-top: 1rem;
+}
+@media (max-width: 999px) {
+  section {
+    grid-template-columns: minmax(0, 810px) 260px;
+  }
+}
+@media (max-width: 864px) {
+  section {
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    padding-top: 0;
+  }
+  section .bio img {
+    margin-left: calc(-1 * var(--space-layout-l));
+    margin-right: calc(-1 * var(--space-layout-l));
+    width: 100vw;
+    height: 384px;
+  }
+  section .data {
+    grid-area: 2/1;
+    margin-top: -0.6rem;
+  }
+  section .colophon {
+    grid-area: 3/1;
+    margin-top: -1rem;
+  }
+}
+@media (max-width: 719px) {
+  section .bio img {
+    padding-top: var(--space-layout-xl);
+  }
+}
+@media (max-width: 499px) {
+  section .bio picture + p {
+    margin-top: 3.8rem;
+  }
+  section .data {
+    margin-top: 0.4rem;
+  }
+  section .colophon {
+    margin-top: 0;
+  }
+}
